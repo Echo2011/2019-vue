@@ -1,0 +1,537 @@
+// @import url('./theme/index.css');
+// #1a99a5
+@deep-blue: #1a99a5;  // header 背景颜色　，　字体颜色 1a99a5
+@bgc-blue:#1a99a5;　　// button 背景色 4b7de0
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #34495e;
+    background-color: #ffffff;
+    line-height: 1.5em;
+    width: 100%;
+    // height: 100%;
+    word-wrap: break-word;
+    word-break: normal;
+    font-family: Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STXihei,\\534E\6587\7EC6\9ED1,Georgia,Times New Roman,Arial,sans-serif;
+}
+
+html {
+    width: 100%;
+    // height: 100%
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+b,
+main,
+nav,
+i,
+section,
+label,
+table,
+th,
+td,
+tr,
+thead,
+tbody,
+caption,
+form,
+fieldset,
+input,
+select,
+dt,
+dd,
+footer {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#app {
+    // display: flex;
+    // flex-direction: column;
+    
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 50px;
+    // align-items: flex-start;
+}
+
+a, .a {
+    color: #444444;
+    text-decoration: none;
+    &:hover {
+        color: @deep-blue;
+        cursor: pointer;
+    }
+}
+
+main {
+     a, .a {
+        color: @deep-blue;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline @deep-blue;
+            cursor: pointer;
+        }
+    } 
+}
+.router-link-active,
+// .router-link-exact-active {
+//   background-color: indianred;
+//   cursor: pointer;
+// }
+
+b {
+    font-weight: normal;
+}
+
+main {
+    flex-grow: 1;
+    /* main元素 占 整个布局余下空间的份额*/
+    background-color: #f1f1f1;
+    padding: 16px;
+    border-left: 1px solid #e6e6e6;
+    padding-bottom: 20px;
+    > div {
+        margin-bottom: 10px;
+    }
+    .operation {
+        position: relative;
+        a:hover {
+            text-decoration:none;
+        }
+         .el-button {
+            margin-right: 10px;
+            padding: 0; 
+            // height:40px;
+            line-height: 25px;
+            // i {
+            //     width: 1.4em;
+            //     height: 1.4em;
+            // }               
+        }
+        .operation-message .el-button {
+            padding: 0px 12px;
+        }
+        .el-button--text {
+            color: #32b1bf;
+            padding: 4px 7px 3px 6px;
+        }
+        .el-button--text:hover {
+            color: #32b1bf; 
+            // text-decoration: underline @deep-blue;
+            svg {
+                color: #32b1bf;                    
+            }
+            border-color: #8dd1e0;
+        }
+        .el-button [class*="el-icon-"] + span {                    
+            margin-left: 0px;
+            
+        }
+        
+    }
+    section {
+        width: 100%;
+        background-color: #ffffff;
+        position: relative;
+        padding: 12px 0 40px 0;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            // border-bottom: 1px solid #cccccc;
+            padding: 0 10px;
+            th {
+                padding: 7px 0;
+                text-align: left;
+                font-weight: normal;
+                color: #777777;
+            }
+            th.operation {
+                padding-left:20px;
+            }
+            tr {
+                border-bottom: 1px solid #eeeeee;
+            }  
+            td {
+                text-align: left;
+                padding: 6px 0;
+                line-height: 32px;
+                min-height: 47px;
+            } 
+            h2 {
+                margin: 0;
+            } 
+            h2 a {
+                color: @deep-blue;
+            }
+            h2 a:hover {
+                text-decoration: underline @deep-blue;
+            }
+            td:first-child{
+                padding-left: 30px;
+            }
+            td:nth-child(1) a,td:nth-child(2) a {
+                font-weight: normal;
+                color: #1a99a5;
+              }
+            td:nth-child(1) a:hover,td:nth-child(2) a:hover {
+                text-decoration: underline @deep-blue;
+                // text-shadow: 0px 1px 0px #32b1bf;
+                // text-decoration: none;
+            }
+            th:first-child{
+                padding-left: 30px;
+            }
+            
+        }
+    }  
+    section.search-info {
+        box-shadow: 0px 2px 3px #dddddd;
+        z-index: 2;
+        padding: 20px 30px;
+    } 
+    section.form {
+        padding: 40px 20px;
+        form {
+            width: 90%;
+            margin: 0 auto;
+        }
+    } 
+}
+
+.el-menu {
+    border-right: none;
+}
+
+nav {
+    padding-top: 10px;
+}
+
+i {
+    font-size: 18px;
+}
+
+i.el-icon-warning.warning {
+    color: rgb(233, 151, 8);
+    font-size: 16px;
+}
+
+i.el-icon-warning.error {
+    color: rgb(207, 10, 10);
+    font-size: 16px;
+}
+
+i.el-icon-circle-check.good {
+    color: rgb(116, 168, 18);
+    font-size: 18px;
+}
+
+i.el-icon-share {
+    transform: rotate(100deg);
+    font-size: 18px;
+}
+
+i.el-icon-circle-check-outline {
+    font-size: 18px;
+    color: rgb(84, 121, 26);
+}
+
+i.el-icon-close.delete {
+    color: rgb(207, 10, 10);
+    font-size: 18px;
+}
+
+svg.icon {
+    /* 阿里巴巴字体图标 */
+    width: 1.2em;
+    height: 1.2em;
+    // vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+nav svg.icon {
+    width: 1.7em;
+    height: 1.7em;
+    margin-right: 18px;
+}
+
+svg.icon.ok {
+    color: green;
+}
+
+svg.icon.warning {
+    color: rgb(233, 151, 8);
+}
+
+svg.icon.error {
+    color: rgb(207, 10, 10);
+}
+
+dt,
+dd {
+    display: inline-block;
+    margin: 0;
+}
+
+.el-message {
+    border-width: 1px;
+}
+
+.el-message--success {
+    border-color: #afddaffb;
+}
+
+.el-message--error {
+    border-color: #ddb4affb;
+}
+
+a.el-button.primary {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.page-block {
+    /*  分页　ｄｉｖ */
+    padding: 16px 0;
+    display: flex;
+    /* color: #999999; */
+    align-items: center;
+    justify-content: flex-end;
+}
+.page-block > span {
+    padding-right: 20px;
+}
+
+.delete-message {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    box-shadow: 3px 3px 3px #dddddd;
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    border-radius: 5px;
+    z-index: 3;
+    min-width: 260px;
+}
+
+table {
+    border-collapse: collapse;
+}
+tbody tr:hover {
+    background-color: #f8feff;
+  }
+/*============================== 覆盖 element-ui  */
+.el-button--primary.is-plain {
+    font-weight: normal;
+}
+
+  /* 可点击的文字 */
+.clickable:hover{ 
+    color: @deep-blue;
+    cursor: pointer;
+}
+.ellipsis {
+    white-space: nowrap; /* 单行显示，　不换行 */
+    overflow: hidden; /* 超出部分隐藏，　要配合　宽度使用*/
+    text-overflow: ellipsis; /* ... */
+    /* max-width: 400px; */
+}
+.red-text { /* 红色文字　*/
+    color: #f56c6c;
+    font-size: 12px;
+    line-height:15px;
+}
+/* 隐藏/显示　的操作框　*/
+.operation-message {
+	min-width: 260px;
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #dddddd;
+	box-shadow: 3px 3px 3px #dddddd;
+	position: absolute;
+	top: 55px;
+	right: 10px;
+	border-radius: 5px;
+	z-index: 2;
+  }
+div.main-btn-wrap {
+	display: flex;
+    justify-content: space-between;
+    position: relative;
+    > div:nth-child(2){
+        div.el-input{
+					display: inline-block;
+					width: 190px;
+					margin-bottom: 1px;
+        }
+        div.el-select{
+            .el-input {
+                width: 215px;
+            }
+        }
+    } 
+} 
+i.el-icon-more {
+	transform: rotate(90deg);
+	cursor: pointer;
+}
+.box-cart {
+	border:1px solid #dddddd;
+	box-shadow: 0px 0px 4px #dddddd;
+	padding: 20px 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	width: 280px;
+	line-height: 30px;
+	position: absolute;
+	text-align: left;
+	right: 10px;
+	z-index: 3;
+	i {
+		padding: 8px;
+	}
+	> div.title {
+		border-bottom:1px solid #eeeeee;
+		padding: 0px 20px 0px 20px;
+		margin-bottom: 10px;
+	}
+	>span.close-wrap {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		z-index: 100;
+	}
+	> ul {
+		padding: 0 30px;
+		line-height: 35px;
+	}
+	div.content {
+		padding: 0 20px;
+	}
+
+}
+
+.el-form .el-form-item  {
+    margin-bottom: 30px;
+  }
+
+// 动画效果
+.operationTransition-enter-active,
+.operationTransition-leave-active {
+  transition: all 0.4s;
+}
+// 进场，　出场状态
+.operationTransition-enter,
+.operationTransition-leave-to {
+  opacity: 0;
+}
+
+li > div.el-menu-item-group__title {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.linkText {
+    color: @deep-blue;
+    cursor: pointer;
+}
+.linkText:hover {
+    // border-bottom: 1px solid @deep-blue;
+    text-decoration: underline @deep-blue;
+}
+.el-loading-parent--relative > .el-loading-mask {
+    z-index: 1998,
+}
+table.ai-table {
+    th {
+        text-align: left;
+        padding-left: 10px;
+        // min-width: 70px;
+        color: #909399;
+        white-space: nowrap; /* 单行显示，　不换行 */
+    }
+    td {
+        padding: 6px;
+        min-width: 90px;
+        hyphens: auto; // 单词过长时自动换行，　ｃｈｒｏｍｅ　不识别
+        word-break: break-all; // 单词换行
+
+    }
+}
+// 在此的样式，可以覆盖掉　element-ui　的样式，在　.vue中覆盖不了
+.form-memory-unit div.el-form-item__error {
+    left :60px;
+  }
+.el-message__content { // 错误提示的行距
+    line-height: 1.5 !important;
+}
+
+// 
+.viewer-btn-wrap {
+    > div {
+        margin-right:10px;
+        margin-left: 10px;
+    }
+    > button:nth-child(1) {
+        margin-right: 10px;
+    }
+}
+
+.item{
+    .el-badge__content.is-fixed.is-dot {
+        right: 0px;
+        top: 6px;
+    }
+}
+.operation {
+    .el-badge__content.is-fixed.is-dot {
+        right: 25px;
+        top: 6px;
+    }
+}
+// ================ 覆盖 element-ui ====================
+span.el-switch__label  {
+    font-weight: 400;
+    color: #4e6174;
+}
+.el-message {
+    // top:70px !important;
+}
+.el-tabs__content {
+    background-color: #fff;
+  }
